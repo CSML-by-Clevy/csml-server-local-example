@@ -1,0 +1,26 @@
+{
+  "name": "@csml/csml-server-example",
+  "version": "1.0.0",
+  "description": "Example project to run the CSML engine locally with Node.js, Docker and MongoDB",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CSML-by-Clevy/csml-server-local-example.git"
+  },
+  "author": "François Falala-Sechet <francois@clevy.io>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CSML-by-Clevy/csml-server-local-example/issues"
+  },
+  "homepage": "https://github.com/CSML-by-Clevy/csml-server-local-example#readme",
+  "dependencies": {
+    "axios": "^0.22.0",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "eslint": "^8.0.0"
+  }
+}

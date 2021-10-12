@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  csml-server:
+    image: clevy/csml-engine:v1.7.0
+    container_name: csml-server
+    ports:
+      - 5000:5000
+    environment:
+      - ENGINE_DB_TYPE=mongodb
+      - ENCRYPTION_SECRET=supersecret
+      - DISABLE_SSL_VERIFY=true
+      - DEBUG=false
+      - MONGODB_HOST=csml-mongodb
+      - MONGODB_PORT=27017
+      - MONGODB_DATABASE=csml
+      - MONGODB_USERNAME=root
+      - MONGODB_PASSWORD=root
+
+  csml-mongodb:
+    image: mongo
+    container_name: csml-mongodb
+    restart: always
+    ports:
+      - 27018:27017
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: root
+    volumes:
+      - ./_data/mongodb:/data
